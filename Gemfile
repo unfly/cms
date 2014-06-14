@@ -1,14 +1,16 @@
 # source 'https://rubygems.org'
-source 'http://ruby.taobao.org'
-#
+# 淘宝源
+source 'http://ruby.taobao.org' 
+# 登录加密
 gem 'bcrypt-ruby'
-# paginate
+# paginate 分页
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # bootstrap
 gem 'bootstrap-sass'
-#
+# 产品环境
 group :production do
+# pg数据库
 	gem 'pg'
 end
 #
