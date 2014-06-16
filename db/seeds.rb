@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+50.times do |n|
+	cases = Case.create(
+											name: "啊猫-#{n+1}",
+											phone: "130-0000-0000",
+											address: "家庭住址",
+											work: "工作单位",
+											relation: "母",
+											cname: "啊服",
+											ename: "jone",
+											gender: "男",
+											birthday: "2000-5-3",
+											school_id: 1,
+											employee_id: 1,
+											record_id: 1,
+											source_id: 1,
+											status: "无效",
+											comment: "test"
+		)
+end

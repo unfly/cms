@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  # get 'cases/index'
+
   # get 'pages/home'
   root 'pages#home'
   # get 'pages/sale'
   match '/sale', to: 'pages#sale', via: 'get'
   # get 'pages/about'
   match '/about', to: 'pages#about', via: 'get'
+  resources :cases
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
