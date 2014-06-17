@@ -1,0 +1,83 @@
+<%= form_for @case do |f| %>
+
+<%= render 'shared/error_messages', object: f.object %> 
+
+<div class="row">
+
+<div class="col-md-4">
+	<div class="form-group">
+		<%= f.label '家长姓名' %>
+		<%= f.text_field :name, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '联系电话' %>
+		<%= f.phone_field :phone, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '家庭住址' %>
+		<%= f.text_field :address, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '工作单位' %>
+		<%= f.text_field :work, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '关系' %>
+		<%= f.select :relation, ["父亲","母亲","其他"], class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '孩子姓名' %>
+		<%= f.text_field :cname, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '孩子英文名' %>
+		<%= f.text_field :ename, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label '性别' %>
+		<%= f.radio_button :gender, "男" %>
+		<%= f.label '男' %>
+		<%= f.radio_button :gender, "女" %>
+		<%= f.label '女' %>
+	</div>
+</div>
+
+<div class="col-md-4">
+	<div class="form-group">
+		<%= f.label '出生日期' %>
+		<%= f.date_select :birthday, class: "form-control" %>
+	</div>
+	<div class="form-group">
+			<%= f.label '就读学校' %>
+			<%= f.text_field :school_id, class: "form-control" %>
+	</div>
+	<div class="form-group">
+			<%= f.label '课程顾问' %>
+			<%= f.text_field :employee_id, class: "form-control" %>
+	</div>
+	<div class="form-group">
+			<%= f.label '跟单情况' %>
+			<%= f.text_field :record_id, class: "form-control" %>
+	</div>
+	<div class="form-group">
+			<%= f.label '信息来源' %>
+			<%= f.text_field :source_id, class: "form-control" %>
+	</div>
+	<div class="form-group">
+			<%= f.label '最新状态' %>
+			<%= f.text_field :status, class: "form-control" %>
+	</div>
+</div>
+
+<div class="col-md-4">
+	<div class="form-group">
+			<%= f.label '备注' %>
+			<%= f.text_area :comment, rows: "8", class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.submit %>
+	</div>
+</div>
+
+</div>
+<% end %>

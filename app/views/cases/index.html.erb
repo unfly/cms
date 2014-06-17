@@ -1,7 +1,7 @@
 <h1>客户名单(<%= @cases.count %>)</h1>
 <p><%= link_to '新增客户', new_case_path %></p>
 <%= will_paginate %>
-<table class="table">
+<table class="table table-hover">
 	<thead>
 		<th>家长姓名</th>
 		<th>联系电话</th>
@@ -16,8 +16,6 @@
 		<th>课程顾问</th>
 		<th>跟单情况</th>
 		<th>信息来源</th>
-		<th>最新状态</th>
-		<th>备注</th>
 		<th></th>
 	</thead>
 	<tbody>
@@ -36,10 +34,8 @@
 			<td><%= c.employee_id %></td>
 			<td><%= c.record_id %></td>
 			<td><%= c.source_id %></td>
-			<td><%= c.status %></td>
-			<td><%= c.comment %></td>
 			<td><%= link_to '编辑', edit_case_path(c) %></td>
-			<td></td>
+			<td><%= link_to '删除', c, method: :delete, data: { confirm: "确定删除客户？" } %></td>
 		</tr>
 		<% end %>
 	</tbody>
