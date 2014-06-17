@@ -1,0 +1,10 @@
+<tr>
+	<td><%= school.name %></td>
+	<td><%= school.address %></td>
+	<td><%= school.contacts %></td>
+	<td><%= school.phone %></td>
+	<td><%= school.comment %></td>
+	<td><%= time_ago_in_words school.updated_at %></td>
+	<td><%= link_to '编辑', edit_school_path(school) %></td>
+	<td><%= link_to '删除', school, method: :delete, data: { confirm: "确定删除客户？" } %></td>
+</tr>

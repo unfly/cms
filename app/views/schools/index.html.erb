@@ -1,0 +1,17 @@
+<h1>学校清单</h1>
+<p><%= link_to '新增', new_school_path %></p>
+
+<table class="table">
+	<tr>
+		<td>学校名称</td>
+		<td>地址</td>
+		<td>联系人</td>
+		<td>联系电话</td>
+		<td>备注</td>
+		<td>更新时间</td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<%= render @schools %>
+</table>

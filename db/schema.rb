@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616131623) do
+ActiveRecord::Schema.define(version: 20140617140832) do
 
   create_table "cases", force: true do |t|
     t.string   "name"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20140616131623) do
     t.integer  "record_id"
     t.integer  "source_id"
     t.string   "status"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schools", force: true do |t|
+    t.string   "name",       limit: 10
+    t.string   "address"
+    t.string   "contacts",   limit: 8
+    t.string   "phone",      limit: 12
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
