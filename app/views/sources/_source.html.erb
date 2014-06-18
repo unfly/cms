@@ -1,0 +1,6 @@
+<tr>
+	<td><%= source.content %></td>
+	<td><%= time_ago_in_words source.updated_at %></td>
+	<td><%= link_to '编辑', edit_source_path(source) %></td>
+	<td><%= link_to '删除', source, method: :delete, data: { confirm: "确定删除客户？" } %></td>
+</tr>

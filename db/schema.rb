@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617140832) do
+ActiveRecord::Schema.define(version: 20140618113116) do
 
   create_table "cases", force: true do |t|
     t.string   "name"
@@ -25,10 +25,17 @@ ActiveRecord::Schema.define(version: 20140617140832) do
     t.date     "birthday"
     t.integer  "school_id"
     t.integer  "employee_id"
-    t.integer  "record_id"
     t.integer  "source_id"
     t.string   "status"
     t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "records", force: true do |t|
+    t.string   "comment"
+    t.integer  "employee_id"
+    t.integer  "case_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,6 +46,12 @@ ActiveRecord::Schema.define(version: 20140617140832) do
     t.string   "contacts",   limit: 8
     t.string   "phone",      limit: 12
     t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sources", force: true do |t|
+    t.string   "content",    limit: 20
     t.datetime "created_at"
     t.datetime "updated_at"
   end

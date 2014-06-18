@@ -12,7 +12,6 @@ class CreateCases < ActiveRecord::Migration
       t.date :birthday
       t.integer :school_id
       t.integer :employee_id
-      t.integer :record_id
       t.integer :source_id
       t.string :status
       t.string :comment

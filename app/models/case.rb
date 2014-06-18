@@ -4,4 +4,6 @@ class Case < ActiveRecord::Base
 	validates :phone, uniqueness: true, numericality: {only_integer: true}
 
 	belongs_to :school
+	belongs_to :source
+	has_many :records
 end

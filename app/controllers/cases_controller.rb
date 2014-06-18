@@ -4,6 +4,10 @@ class CasesController < ApplicationController
   	@cases = Case.paginate(page: params[:page])
   end
 
+  def show
+    @case = Case.find(params[:id])
+  end
+
   def new
   	@case = Case.new
   end

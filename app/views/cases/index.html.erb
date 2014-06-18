@@ -6,7 +6,6 @@
 		<th>家长姓名</th>
 		<th>联系电话</th>
 		<th>家庭住址</th>
-		<th>工作单位</th>
 		<th>关系</th>
 		<th>孩子姓名</th>
 		<th>孩子英文名</th>
@@ -14,7 +13,6 @@
 		<th>出生日期</th>
 		<th>就读学校</th>
 		<th>课程顾问</th>
-		<th>跟单情况</th>
 		<th>信息来源</th>
 		<th></th>
 	</thead>
@@ -24,7 +22,6 @@
 			<td><%= c.name %></td>
 			<td><%= c.phone %></td>
 			<td><%= c.address %></td>
-			<td><%= c.work %></td>
 			<td><%= c.relation %></td>
 			<td><%= c.cname %></td>
 			<td><%= c.ename %></td>
@@ -32,9 +29,8 @@
 			<td><%= c.birthday %></td>
 			<td><%= c.school.name %></td>
 			<td><%= c.employee_id %></td>
-			<td><%= c.record_id %></td>
-			<td><%= c.source_id %></td>
-			<td><%= link_to '编辑', edit_case_path(c) %></td>
+			<td><%= c.source.content %></td>
+			<td><%= link_to '详情', case_path(c) %></td>
 			<td><%= link_to '删除', c, method: :delete, data: { confirm: "确定删除客户？" } %></td>
 		</tr>
 		<% end %>

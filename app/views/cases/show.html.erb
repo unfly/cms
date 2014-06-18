@@ -1,0 +1,31 @@
+<h1><%= @case.name %></h1>
+
+<dl class="dl-horizontal">
+	<dt>联系电话:</dt>
+	<dd><%= @case.phone %></dd>
+	<dt>家庭住址:</dt>
+	<dd><%= @case.address %></dd>
+	<dt>工作单位:</dt>
+	<dd><%= @case.work %></dd>
+	<dt>关系:</dt>
+	<dd><%= @case.relation %></dd>
+	<dt>孩子姓名:</dt>
+	<dd><%= @case.cname %></dd>
+	<dt>孩子英文名:</dt>
+	<dd><%= @case.ename %></dd>
+	<dt>性别:</dt>
+	<dd><%= @case.gender %></dd>
+	<dt>出生日期:</dt>
+	<dd><%= @case.birthday %></dd>
+	<dt>就读学校:</dt>
+	<dd><%= @case.school.name %></dd>
+	<dt>课程顾问:</dt>
+	<dd><%= @case.employee_id %></dd>
+	<dt>信息来源:</dt>
+	<dd><%= @case.source.content %></dd>
+	<dt>最新状态:</dt>
+	<dd><%= @case.status %></dd>
+	<dt>备注:</dt>
+	<dd><%= @case.comment %></dd>
+	<dt>跟单情况:</dt>
+</dl>

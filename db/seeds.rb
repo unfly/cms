@@ -9,7 +9,7 @@
 50.times do |n|
 	cases = Case.create(
 											name: "啊猫-#{n+1}",
-											phone: "130-0000-0000",
+											phone: "1300000000#{n}",
 											address: "家庭住址",
 											work: "工作单位",
 											relation: "母",
@@ -19,9 +19,19 @@
 											birthday: "2000-5-3",
 											school_id: 1,
 											employee_id: 1,
-											record_id: 1,
 											source_id: 1,
 											status: "无效",
 											comment: "test"
 		)
 end
+
+schools = School.create( name: "school",
+												 address: "address",
+												 contacts: "master",
+												 phone: "130",
+												 comment: "test"
+	)
+
+sources = Source.create( content: "content"
+	)
+
