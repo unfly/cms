@@ -1,0 +1,67 @@
+zh-CN:
+  home: "首页"
+  sale:	"销售"
+  about: "关于"
+  cn: "简体中文"
+  case: "销售情况"
+  school: "学校"
+  source: "信息来源"
+  record: "记录"
+  cases_index: "客户名单"
+  new: "新增"
+  
+  show: "详情"
+  edit: "编辑"
+  delete: "删除"
+  confirm_msg: "你确定！"
+  
+  name: "姓名"
+  school_name: "学校名称"
+  school_address: "学校地址"
+  phone: "联系电话"
+  address: "家庭地址"
+  work: "工作单位"
+  relation: "关系"
+  cname: "孩子姓名"
+  ename: "孩子英文名"
+  gender: "孩子性别"
+  birthday: "出生日期"
+  contacts: "联系人"
+  comment: "备注"
+  updated_at: "更新时间"
+  
+  activerecord:
+    models:
+      case: "销售情况表"
+      school: "学校表"
+      source: "信息来源表"
+      record: "跟单记录表"
+    attributes:
+      case:
+        name: "家长姓名"
+        phone: "联系电话"
+        address: "家庭地址"
+        work: "工作单位"
+        relation: "关系"
+        cname: "孩子姓名"
+        ename: "孩子英文名"
+        gender: "孩子性别"
+        birthday: "出生日期"
+        comment: "备注"
+        
+      school:
+        name: "学校名称"
+        address: "学校地址"
+        contacts: "联系人"
+        phone: "联系电话"
+        comment: "备注"
+        
+      source:
+        comment: "信息来源"
+        
+      record:
+        comment: "跟单记录"
+  
+  will_paginate:
+    next_label: "下一页"
+    previous_label: "上一页"

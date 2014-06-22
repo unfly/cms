@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   match '/sale', to: 'pages#sale', via: 'get'
   # get 'pages/about'
   match '/about', to: 'pages#about', via: 'get'
+  #
+ 
   resources :cases
   resources :schools
   resources :sources

@@ -8,6 +8,8 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # bootstrap
 gem 'bootstrap-sass'
+# 
+gem 'rails-i18n'
 # 产品环境
 group :production do
 # pg数据库

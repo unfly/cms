@@ -2,9 +2,10 @@
 	<h1 id="logo">CMS</h1>
 	<nav class="navbar navbar-default">
 		<ul class="nav navbar-nav" >
-			<li><%= link_to '首页', root_path %></li>
-			<li><%= link_to '销售', sale_path %></li>
-			<li><%= link_to '关于', about_path %></li>
+			<li><%= link_to t(:home), root_path %></li>
+			<li><%= link_to t(:sale), sale_path %></li>
+			<li><%= link_to t(:about), about_path %></li>
+			
 		</ul>
 	</nav>
 </header>

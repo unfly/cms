@@ -1,19 +1,19 @@
-<h1>客户名单(<%= @cases.count %>)</h1>
-<p><%= link_to '新增客户', new_case_path %></p>
+<h1><%= t :cases_index %>(<%= @cases.count %>)</h1>
+<p><%= link_to t(:new), new_case_path %></p>
 <%= will_paginate %>
 <table class="table table-hover">
 	<thead>
-		<th>家长姓名</th>
-		<th>联系电话</th>
-		<th>家庭住址</th>
-		<th>关系</th>
-		<th>孩子姓名</th>
-		<th>孩子英文名</th>
-		<th>性别</th>
-		<th>出生日期</th>
-		<th>就读学校</th>
-		<th>课程顾问</th>
-		<th>信息来源</th>
+		<th><%= t(:name) %></th>
+		<th><%= t(:phone) %></th>
+		<th><%= t(:address) %></th>
+		<th><%= t(:relation) %></th>
+		<th><%= t(:cname) %></th>
+		<th><%= t(:ename) %></th>
+		<th><%= t(:gender) %></th>
+		<th><%= t(:birthday) %></th>
+		<th><%= t(:school) %></th>
+		<th><%= t(:employee_id) %></th>
+		<th><%= t(:source) %></th>
 		<th></th>
 	</thead>
 	<tbody>
@@ -30,8 +30,8 @@
 			<td><%= c.school.name %></td>
 			<td><%= c.employee_id %></td>
 			<td><%= c.source.content %></td>
-			<td><%= link_to '详情', case_path(c) %></td>
-			<td><%= link_to '删除', c, method: :delete, data: { confirm: "确定删除客户？" } %></td>
+			<td><%= link_to t(:show), case_path(c) %></td>
+			<td><%= link_to t(:delete), c, method: :delete, data: { confirm: t(:confirm_msg) } %></td>
 		</tr>
 		<% end %>
 	</tbody>
