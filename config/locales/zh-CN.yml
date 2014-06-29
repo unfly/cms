@@ -1,4 +1,5 @@
 zh-CN:
+  cms: "校区管理系统"
   home: "首页"
   sale:	"销售"
   about: "关于"
@@ -9,11 +10,16 @@ zh-CN:
   record: "记录"
   cases_index: "客户名单"
   new: "新增"
+  log_in: "登录"
+  log_out: "注销"
+  sign_in: "注册"
   
   show: "详情"
   edit: "编辑"
-  delete: "删除"
+  delete: "删除" 
+  destroy: "删除" 
   confirm_msg: "你确定！"
+  back: "返回"
   
   name: "姓名"
   school_name: "学校名称"
@@ -28,6 +34,7 @@ zh-CN:
   birthday: "出生日期"
   contacts: "联系人"
   comment: "备注"
+  description: "跟单记录"
   updated_at: "更新时间"
   
   activerecord:
@@ -36,6 +43,7 @@ zh-CN:
       school: "学校表"
       source: "信息来源表"
       record: "跟单记录表"
+      employee: "员工表"
     attributes:
       case:
         name: "家长姓名"
@@ -48,6 +56,11 @@ zh-CN:
         gender: "孩子性别"
         birthday: "出生日期"
         comment: "备注"
+        school_id: "就读学校"
+        employee_id: "跟单老师"
+        source_id: "信息来源"
+        created_at: "创建时间"
+        updated_at: "更新时间"
         
       school:
         name: "学校名称"
@@ -57,10 +70,20 @@ zh-CN:
         comment: "备注"
         
       source:
-        comment: "信息来源"
+        content: "信息来源"
         
       record:
-        comment: "跟单记录"
+        description: "跟单记录"
+        
+      employee:
+        name: "用户名"
+        password: "密码"
+        password_confirmation: "确认密码"
+        post: "权限"
+        cname: "中文名"
+        phone: "电话"
+        idcard: "身份证"
+        comment: "备注"
   
   will_paginate:
     next_label: "下一页"

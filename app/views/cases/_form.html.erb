@@ -44,24 +44,20 @@
 
 <div class="col-md-4">
 	<div class="form-group">
-		<%= f.label :birthday %>
-		<%= f.date_select :birthday, class: "form-control" %>
+		<%= f.label :birthday %><br>
+		<%= f.date_select :birthday, class: "select" %>
 	</div>
 	<div class="form-group">
 			<%= f.label :school_id %>
-			<%= f.text_field :school_id, class: "form-control" %>
+			<%= f.select :school_id, School.all.collect{|p| [p.name, p.id]}, class: "form-control" %>
 	</div>
 	<div class="form-group">
 			<%= f.label :employee_id %>
-			<%= f.text_field :employee_id, class: "form-control" %>
+			<%= f.select :employee_id, Employee.all.collect{|p| [p.name, p.id]}, class: "form-control" %>
 	</div>
 	<div class="form-group">
 			<%= f.label :source_id %>
-			<%= f.text_field :source_id, class: "form-control" %>
-	</div>
-	<div class="form-group">
-			<%= f.label :status %>
-			<%= f.text_field :status, class: "form-control" %>
+			<%= f.select :source_id,Source.all.collect {|p| [p.content, p.id]}, class: "form-control" %>
 	</div>
 </div>
 
@@ -71,7 +67,7 @@
 			<%= f.text_area :comment, rows: "8", class: "form-control" %>
 	</div>
 	<div class="form-group">
-		<%= f.submit %>
+		<%= f.submit class: "btn btn-lg btn-primary" %>
 	</div>
 </div>
 

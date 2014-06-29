@@ -6,6 +6,8 @@ class CasesController < ApplicationController
 
   def show
     @case = Case.find(params[:id])
+    @records = @case.records.all
+    @record = @case.records.build
   end
 
   def new

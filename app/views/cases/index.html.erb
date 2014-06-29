@@ -1,6 +1,6 @@
-<h1><%= t :cases_index %>(<%= @cases.count %>)</h1>
-<p><%= link_to t(:new), new_case_path %></p>
-<%= will_paginate %>
+<h3><%= t :cases_index %>(<%= @cases.count %>)</h3>
+<p><%= link_to t(:new), new_case_path, class: "btn btn-primary" %></p>
+
 <table class="table table-hover">
 	<thead>
 		<th><%= t(:name) %></th>
@@ -30,8 +30,8 @@
 			<td><%= c.school.name %></td>
 			<td><%= c.employee_id %></td>
 			<td><%= c.source.content %></td>
-			<td><%= link_to t(:show), case_path(c) %></td>
-			<td><%= link_to t(:delete), c, method: :delete, data: { confirm: t(:confirm_msg) } %></td>
+			<td><%= link_to t(:show), case_path(c),class: "btn btn-success" %></td>
+			<td><%= link_to t(:delete), c, method: :delete, data: { confirm: t(:confirm_msg) }, class: "btn btn-danger" %></td>
 		</tr>
 		<% end %>
 	</tbody>

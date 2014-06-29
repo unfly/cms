@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :employees
+
   # get 'cases/index'
 
   # get 'pages/home'
@@ -8,11 +10,13 @@ Rails.application.routes.draw do
   # get 'pages/about'
   match '/about', to: 'pages#about', via: 'get'
   #
+  match '/logout', to: 'sessions#destroy', via: 'delete'
  
   resources :cases
   resources :schools
   resources :sources
   resources :records
+  resources :sessions, only:[:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

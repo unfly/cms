@@ -11,30 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618113116) do
+ActiveRecord::Schema.define(version: 20140628023036) do
 
   create_table "cases", force: true do |t|
-    t.string   "name"
-    t.string   "phone"
+    t.string   "name",        limit: 10
+    t.string   "phone",       limit: 20
     t.string   "address"
-    t.string   "work"
-    t.string   "relation"
-    t.string   "cname"
-    t.string   "ename"
-    t.string   "gender"
+    t.string   "work",        limit: 20
+    t.string   "relation",    limit: 8
+    t.string   "cname",       limit: 10
+    t.string   "ename",       limit: 20
+    t.string   "gender",      limit: 8
     t.date     "birthday"
     t.integer  "school_id"
     t.integer  "employee_id"
     t.integer  "source_id"
-    t.string   "status"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employees", force: true do |t|
+    t.string   "name",            limit: 10
+    t.string   "password_digest"
+    t.string   "post",            limit: 8
+    t.string   "cname",           limit: 10
+    t.string   "phone",           limit: 14
+    t.string   "idcard",          limit: 20
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "records", force: true do |t|
-    t.string   "comment"
-    t.integer  "employee_id"
+    t.string   "description"
+    t.string   "status",      limit: 10
     t.integer  "case_id"
     t.datetime "created_at"
     t.datetime "updated_at"

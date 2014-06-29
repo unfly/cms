@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+<div class="jumbotron">
+<h2>:-) CTP美化少儿英语校区管理系统！</h2>
+<% if log_in? %>
+	<p>
+		欢迎回来！ <%= current_user.name %> 老师。
+	</p>
+<% else %>
+	<p>
+		<%= link_to t(:log_in), '' %> 或者 <%= link_to t(:sign_in), '' %> 。
+	</p>
+<% end %>
+
+</div>
+</div>
+

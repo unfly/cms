@@ -1,0 +1,35 @@
+<h1>Listing employees</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>英文名</th>
+      <th>岗位</th>
+      <th>中文名</th>
+      <th>电话</th>
+      <th>身份证</th>
+      <th>备注</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.name %></td>
+        <td><%= employee.post %></td>
+        <td><%= employee.cname %></td>
+        <td><%= employee.phone %></td>
+        <td><%= employee.idcard %></td>
+        <td><%= employee.comment %></td>
+        <td><%= link_to t(:show), employee, class: "btn btn-default" %></td>
+        <td><%= link_to t(:edit), edit_employee_path(employee), class: "btn btn-info" %></td>
+        <td><%= link_to t(:destroy), employee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employee', new_employee_path %>

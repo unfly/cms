@@ -1,0 +1,4 @@
+<% if Rails.env.development? %>
+<%= debug(params) %><br>
+<%= debug(session[:user_id]) %>
+<% end %>

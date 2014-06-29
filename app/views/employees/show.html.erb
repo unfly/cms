@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @employee.password_digest %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @employee.post %>
+</p>
+
+<p>
+  <strong>Cname:</strong>
+  <%= @employee.cname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @employee.phone %>
+</p>
+
+<p>
+  <strong>Idcard:</strong>
+  <%= @employee.idcard %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @employee.comment %>
+</p>
+
+<%= link_to t('edit'), edit_employee_path(@employee) %> |
+<%= link_to t('back'), employees_path %>

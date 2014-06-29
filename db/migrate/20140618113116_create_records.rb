@@ -1,8 +1,8 @@
 class CreateRecords < ActiveRecord::Migration
   def change
     create_table :records do |t|
-      t.string :comment
-      t.integer :employee_id
+      t.string :description
+      t.string :status, limit: 10
       t.integer :case_id
       t.timestamps
     end

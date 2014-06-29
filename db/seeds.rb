@@ -20,18 +20,8 @@
 											school_id: 1,
 											employee_id: 1,
 											source_id: 1,
-											status: "无效",
 											comment: "test"
 		)
 end
 
-schools = School.create( name: "school",
-												 address: "address",
-												 contacts: "master",
-												 phone: "130",
-												 comment: "test"
-	)
-
-sources = Source.create( content: "content"
-	)
 

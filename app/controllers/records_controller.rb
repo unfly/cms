@@ -7,6 +7,7 @@ class RecordsController < ApplicationController
 	end
 
 	def create
+		
 		@record = Record.new(record_params)
 		if @record.save
 			redirect_to records_url
@@ -49,6 +50,6 @@ class RecordsController < ApplicationController
 		end
 
 		def record_params
-			params.require(:record).permit(:comment)
+			params.require(:record).permit(:description, :status, :case_id)
 		end
 end
