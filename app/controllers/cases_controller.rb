@@ -1,4 +1,6 @@
 class CasesController < ApplicationController
+
+  before_action :first_login
   
   def index
   	@cases = Case.paginate(page: params[:page])

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   match '/about', to: 'pages#about', via: 'get'
   #
   match '/logout', to: 'sessions#destroy', via: 'delete'
+  match '/login', to: 'sessions#new', via: 'get'
  
   resources :cases
   resources :schools

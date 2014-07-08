@@ -10,6 +10,9 @@ zh-CN:
   record: "记录"
   cases_index: "客户名单"
   new: "新增"
+  hr: "人力资源"
+  employee: "员工名单"
+  list: "列表"
   log_in: "登录"
   log_out: "注销"
   sign_in: "注册"
@@ -39,7 +42,7 @@ zh-CN:
   
   activerecord:
     models:
-      case: "销售情况表"
+      case: "客户关系表"
       school: "学校表"
       source: "信息来源表"
       record: "跟单记录表"

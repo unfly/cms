@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Password digest:</strong>
-  <%= @employee.password_digest %>
-</p>
-
-<p>
   <strong>Post:</strong>
   <%= @employee.post %>
 </p>
@@ -33,6 +28,16 @@
 <p>
   <strong>Comment:</strong>
   <%= @employee.comment %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= l @employee.created_at %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= l @employee.updated_at %>
 </p>
 
 <%= link_to t('edit'), edit_employee_path(@employee) %> |

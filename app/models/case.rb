@@ -5,5 +5,6 @@ class Case < ActiveRecord::Base
 
 	belongs_to :school
 	belongs_to :source
+	belongs_to :employee
 	has_many :records
 end

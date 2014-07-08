@@ -28,7 +28,7 @@
 			<td><%= c.gender %></td>
 			<td><%= c.birthday %></td>
 			<td><%= c.school.name %></td>
-			<td><%= c.employee_id %></td>
+			<td><%= c.employee.name %></td>
 			<td><%= c.source.content %></td>
 			<td><%= link_to t(:show), case_path(c),class: "btn btn-success" %></td>
 			<td><%= link_to t(:delete), c, method: :delete, data: { confirm: t(:confirm_msg) }, class: "btn btn-danger" %></td>

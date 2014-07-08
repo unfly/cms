@@ -15,6 +15,12 @@ module SessionsHelper
 	def current_user
 		Employee.find(session[:user_id])
 	end
-
+# 登录验证
+	def first_login
+		unless log_in?
+			redirect_to login_path
+			flash[:warning] = "请先登录！"
+		end
+	end
 
 end

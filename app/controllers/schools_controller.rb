@@ -1,5 +1,7 @@
 class SchoolsController < ApplicationController
 
+  before_action :first_login
+	
 	before_action :find_id_school, only: [:edit, :update, :show, :destroy]
 
 	def new

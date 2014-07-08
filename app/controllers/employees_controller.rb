@@ -1,4 +1,7 @@
 class EmployeesController < ApplicationController
+  
+  before_action :first_login, only: [:index, :show, :edit, :update, :destroy]
+
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   # GET /employees
@@ -28,6 +31,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.save
+        log_in
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
         format.json { render :show, status: :created, location: @employee }
       else

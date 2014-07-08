@@ -1,5 +1,7 @@
 class RecordsController < ApplicationController
 
+		 before_action :first_login
+		 
 		before_action :find_id_record, only: [:edit, :update, :show, :destroy]
 
 	def new
